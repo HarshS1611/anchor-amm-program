@@ -25,6 +25,21 @@ anchor-lang = { version = "1.0.2", features = ["init-if-needed"] }
 anchor-spl = "1.0.2"
 constant-product-curve = { git = "https://github.com/deanmlittle/constant-product-curve.git" }
 
+[dev-dependencies]
+litesvm        = "0.12.0"
+litesvm-token  = "0.12.0"
+sha2           = "0.11.0"
+
+solana-keypair     = "3.1.0" 
+solana-signer      = "3.0.0"
+solana-pubkey      = "4.1.0"  
+solana-hash        = "4.1.0" 
+solana-message     = "3.1.0"  
+solana-transaction = "3.0.2"   
+
+[[test]]
+name = "amm-program"
+path = "../../tests/amm-program.rs"
 
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }
